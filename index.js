@@ -5,7 +5,7 @@ config();
 
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => {
+  .then(() => {                    
     console.log(`Db is connected...`);
   })
   .catch(() => {
