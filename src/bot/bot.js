@@ -97,7 +97,7 @@ const checkIfUserSubscrideb = async (chatId) => {
 } 
 bot.on("message", (msg) => {
   const chatId = msg.chat.id;
-  const firstname = msg.chat.first_name;
+  const first_name = msg.chat.first_name;
   const text = msg.text;
   
   if (text == "/start") {
