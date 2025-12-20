@@ -111,5 +111,34 @@ bot.on("message", (msg) => {
   return onError(msg);
 });
 
+bot.on("message", (msg) => {
+  const chatId = msg.chat.id;
+  const first_name = msg.chat.first_name;
+  const text = msg.text;
+
+   bot.sendMessage(chatId, `Assalomu alaykum hurmatli ${first_name} quyidagilarni ko'rip chiqqan holda tanlang👇 `, {
+    reply_markup: {
+      keyboard: [
+        [
+          {
+            text: "Kurslarga yozilish📚",
+          },
+          ],
+          [
+
+            
+              {text: "Biz bilan bog'lanish☎️"},
+              {text: "Ro'yhatdan o'tish📝"}
+            
+          ],
+        
+      ],
+      resize_keyboard: true,
+    },
+   }); 
+    
+   
+});
+
 console.log("Bot ishga tushdi...");
 
