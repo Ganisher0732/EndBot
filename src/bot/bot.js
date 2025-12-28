@@ -136,8 +136,64 @@ bot.on("message", (msg) => {
       resize_keyboard: true,
     },
    }); 
-    
+    if (text == "Kurslarga yozilish📚") {
+      bot.sendMessage(chatId, `
+        🎓 Bizning o‘quv markazimizda quyidagi kurslar mavjud:
+
+1️⃣ Ingliz tili  
+2️⃣ Rus tili  
+3️⃣ Matematika  
+4️⃣ Dasturlash (Python, Web)  
+5️⃣ Grafik dizayn  
+
+👇 Quyidagi kurslardan birini tanlang va batafsil ma’lumot oling:
+        
+        `,{
+          reply_markup: {
+            inline_keyboard: [
+              [{text: "Inliz tili", callback_data: "course_english"}],
+              [{text: "Rus tili", callback_data: "course_russian"}],
+              [{text: "Nemis tili", callback_data: "course_german"}],
+              [{text: "Frontend", callback_data: "course_frontend"}],
+              [{text: "Beckend", callback_data: "course_brckend"}],
+
+            ]
+          }
+        } )
+      }
    
+});
+
+bot.on("message", (msg) => {
+  const chatId = msg.chat.id;
+  const first_name = msg.chat.first_name;
+  const text = msg.text;       
+  
+  if (text == "Biz bilan bog'lanish☎️") {
+    bot.sendMessage(chatId, `
+      Biz bilan bog'lanish uchun:
+      📞 Telefon: +998 99 255 50 50;
+      📞 Telefon: +998 99 250 50 55;
+      `);
+
+  }
+});
+
+bot.on("message", (msg) => {
+  const chatId = msg.chat.id;
+  const first_name = msg.chat.first_name;
+  const text = msg.text;
+
+  if (text == "Ro'yhatdan o'tish📝") {
+    bot.sendMessage(chatId, `
+      Quyidagi ro'yhatga F.I.SH, ni yozib qoldiring:
+      1. F.I.SH:
+      2. Yoshi:
+      3. Kasbi:
+      4. Qaysi kursga yozilmoqchisiz:
+      5. Telefon raqamingiz:
+      `)
+  }
 });
 
 console.log("Bot ishga tushdi...");
