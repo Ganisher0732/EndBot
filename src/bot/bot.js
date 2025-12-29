@@ -189,7 +189,6 @@ bot.on("message", (msg) => {
       Quyidagi ro'yhatga F.I.SH, ni yozib qoldiring:
       1. F.I.SH:
       2. Yoshi:
-      3. Kasbi:
       4. Qaysi kursga yozilmoqchisiz:
       5. Telefon raqamingiz:
       `)
